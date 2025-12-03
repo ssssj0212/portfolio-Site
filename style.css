@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500&family=Inter:wght@300;400;500&display=swap');
+
+:root{
+  --text:#2E2E2E;
+  --muted:#6F6F6F;
+  --bg:#FFFFFF;
+  --accent:#E8DCC8;
+}
+
+*{box-sizing:border-box;}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background-color: var(--bg);
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: var(--muted);
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 40px;
+  background-color: var(--accent);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  margin: 0;
+}
+
+.hero-text p {
+  margin-top: 10px;
+  color: #333;
+}
+
+.hero-img img {
+  width: 280px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.15);
+  display:block;
+}
+
+/* Section styles */
+section {
+  padding: 80px 40px;
+}
+
+h2 {
+  font-size: 28px;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 30px;
+}
+
+.about p {
+  max-width: 600px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow: 0px 3px 12px rgba(0,0,0,0.12);
+  transition: transform 0.2s;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+.contact p {
+  font-size: 16px;
+  color: #333;
+}
+
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #777;
+  font-size: 14px;
+}
+
+/* 반응형 기본 */
+@media (max-width: 700px) {
+  .hero { padding: 40px 20px; }
+  .hero-img img { width: 220px; margin-top: 20px; }
+  nav a { margin-left: 12px; font-size: 13px; }
+  section { padding: 40px 20px; }
+}
