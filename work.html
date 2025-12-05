@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Works – Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">YOUR NAME</div>
+    <nav>
+      <a href="index.html#about">About</a>
+      <a href="work.html" style="font-weight:700;">Works</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="works">
+      <h2>Selected Works</h2>
+
+      <!-- 갤러리 그리드 -->
+      <div class="gallery" id="gallery">
+        <!-- 반복되는 항목: 이미지 경로와 data-caption만 바꿔 넣으면 됩니다 -->
+        <div class="gallery-item">
+          <img src="images/work1.jpg" alt="Work 1" loading="lazy" data-caption="Work 1 — 2024 Collection">
+        </div>
+        <div class="gallery-item">
+          <img src="images/work2.jpg" alt="Work 2" loading="lazy" data-caption="Work 2 — Textile Study">
+        </div>
+        <div class="gallery-item">
+          <img src="images/work3.jpg" alt="Work 3" loading="lazy" data-caption="Work 3 — Runway Look">
+        </div>
+        <!-- 더 많은 항목 -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 YOUR NAME – New York Fashion Designer
+  </footer>
+
+  <!-- 모달 (초기엔 hidden) -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Image preview">
+    <button class="lightbox-close" aria-label="Close">✕</button>
+    <div class="lightbox-content">
+      <img src="" alt="" id="lightbox-img">
+      <p id="lightbox-caption"></p>
+    </div>
+    <button class="lightbox-prev" aria-label="Previous">‹</button>
+    <button class="lightbox-next" aria-label="Next">›</button>
+  </div>
+
+  <script src="work.js"></script>
+</body>
+</html>
