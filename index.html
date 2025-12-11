@@ -2,23 +2,22 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portfolio – Fashion Designer</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- Header -->
-  <header class="header">
-    <div class="logo">YOUR NAME</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="work.html">Works</a>
-      <a href="contact.html">Contact</a>
-      <a href="about.html">About</a>
-    </nav>
-  </header>
-
+<header class="header">
+  <div class="logo">YOUR NAME</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="work.html">Works</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
   <!-- Hero -->
   <section class="hero">
     <div class="hero-text">
@@ -30,34 +29,29 @@
     </div>
   </section>
 
- 
   <!-- Footer -->
   <footer>
     © 2025 YOUR NAME – New York Fashion Designer
   </footer>
 
-
-  <!-- 🔥 네비게이션 클릭 시 항상 작동 & 부드러운 스크롤 + 헤더높이 반영 -->
+  <!-- Scroll offset script -->
   <script>
     (function () {
       const header = document.querySelector('.header');
-      const headerHeight = () => header.getBoundingClientRect().height;
 
       document.querySelectorAll('nav a[href^="#"]').forEach(link => {
         link.addEventListener('click', function (e) {
           e.preventDefault();
-          const targetId = this.getAttribute('href').substring(1);
-          const targetEl = document.getElementById(targetId);
-          if (!targetEl) return;
 
-          const top = window.pageYOffset + targetEl.getBoundingClientRect().top - headerHeight() - 10;
+          const id = this.getAttribute('href').substring(1);
+          const target = document.getElementById(id);
+          if (!target) return;
 
-          window.scrollTo({
-            top: top,
-            behavior: 'smooth'
-          });
+          const headerHeight = header.offsetHeight;
+          const offsetTop = target.offsetTop - headerHeight - 10;
 
-          history.replaceState(null, '', '#' + targetId);
+          window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+          history.replaceState(null, '', `#${id}`);
         });
       });
     })();
