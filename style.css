@@ -1,6 +1,26 @@
 /* ------------------------------------------------------
    Global
 ------------------------------------------------------ */
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background-color: var(--bg);
+}
+
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  color: #777;
+  font-size: 0.875rem;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500&family=Inter:wght@300;400;500&display=swap');
 
 :root {
@@ -206,10 +226,16 @@ h2 {
 /* ------------------------------------------------------
    Contact
 ------------------------------------------------------ */
+.contact {
+  margin-top: 200px; 
+  padding-bottom: 80px;
+}
+
 .contact p {
   font-size: 1rem;
   color: #333;
   text-align: center;
+
 }
 
 /* ------------------------------------------------------
@@ -267,11 +293,11 @@ footer {
     grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   }
 
-  /* 좌측 정렬 시키기 */
+ 
   h2,
   .about p,
   .contact p {
-    text-align: left;
+    text-align: center;
   }
 }
 
